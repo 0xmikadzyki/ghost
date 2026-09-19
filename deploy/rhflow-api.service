@@ -1,0 +1,14 @@
+# /etc/systemd/system/rhflow-api.service — read-only API on loopback; put nginx/caddy in front for TLS.
+[Unit]
+Description=rhflow read-only API
+After=docker.service
+
+[Service]
+WorkingDirectory=/root/rhflow/app
+EnvironmentFile=/root/.rh.env
+ExecStart=/root/rhflow/venv/bin/python -m rhflow serve --host 127.0.0.1 --port 8791
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

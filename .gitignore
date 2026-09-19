@@ -1,0 +1,26 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+*.bak
+
+# data lives on the ingest box only
+data/
+
+# site & design: not published in this repository
+design/
+rhc-flow/
+DESIGN_*.md
+REFS_PROMPT.md
+refs/
+
+# agent scratch
+scratch/
+scratch2/
+
+# public website (own repo, see site/README.draft.md)
+site/

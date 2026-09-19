@@ -1,0 +1,39 @@
+[project]
+name = "rhflow"
+version = "0.1.0"
+description = "Fund-flow data pipeline for Robinhood Chain (chain id 4663): full ERC-20 Transfer backfill via HyperSync."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "httpx>=0.28",
+    "uvicorn>=0.30",
+]
+
+[project.scripts]
+rhflow = "rhflow.cli:main"
+
+[project.optional-dependencies]
+# rhflow.research.fingerprint / extra need keccak for 4-byte selectors
+research = [
+    "pycryptodome>=3.20",
+]
+# scripts/readme_media.py only: builds the README GIFs from the pixel master and one saved API response
+media = [
+    "pillow>=10",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["rhflow"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

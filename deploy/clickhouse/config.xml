@@ -1,0 +1,12 @@
+<!-- rhflow server config. Replaces the image's docker_related_config.xml (which opens 0.0.0.0). -->
+<clickhouse>
+    <listen_host>127.0.0.1</listen_host>
+    <http_port>8123</http_port>
+    <tcp_port>9000</tcp_port>
+    <mysql_port remove="remove"/>
+    <postgresql_port remove="remove"/>
+    <interserver_http_port remove="remove"/>
+    <max_server_memory_usage>10000000000</max_server_memory_usage>
+    <mark_cache_size>1073741824</mark_cache_size>
+    <logger><level>information</level></logger>
+</clickhouse>

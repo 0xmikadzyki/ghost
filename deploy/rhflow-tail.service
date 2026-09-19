@@ -1,0 +1,14 @@
+# /etc/systemd/system/rhflow-tail.service — follows the chain head; start only after `rhflow store load` printed [done].
+[Unit]
+Description=rhflow tail worker (HyperSync -> ClickHouse)
+After=docker.service
+
+[Service]
+WorkingDirectory=/root/rhflow/app
+EnvironmentFile=/root/.rh.env
+ExecStart=/root/rhflow/venv/bin/python -m rhflow tail --interval 10
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

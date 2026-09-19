@@ -1,0 +1,18 @@
+<!-- rhflow user config: per-query limits; default user reachable from loopback only, no password. -->
+<clickhouse>
+    <profiles>
+        <default>
+            <max_memory_usage>6000000000</max_memory_usage>
+            <max_threads>8</max_threads>
+            <max_execution_time>0</max_execution_time>
+        </default>
+    </profiles>
+    <users>
+        <default>
+            <networks replace="replace">
+                <ip>127.0.0.1</ip>
+                <ip>::1</ip>
+            </networks>
+        </default>
+    </users>
+</clickhouse>

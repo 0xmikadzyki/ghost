@@ -1,0 +1,20 @@
+[
+  {"addr": "0x0000000000000000000000000000000000000000", "label": "Zero address (mint/burn)", "type": "EOA", "is_contract": 0,
+   "source": "docs/ARCHITECTURE.md Facts: 21.9% of transfers touch it; eth_getCode = 0x checked 2026-09-17"},
+  {"addr": "0x0bd7d308f8e1639fab988df18a8011f41eacad73", "label": "WETH (bridged, L1 0xc02a...56cc2)", "type": "ERC", "is_contract": 1,
+   "source": "docs/RECON.md §3 'Мост (п. 16)'; data/sample/enrich.json token_meta + token_bridge_probe l1Address(); symbol()/decimals() re-checked via RPC 2026-09-17"},
+  {"addr": "0x1d187c3e2da52d72bc9c41e3aba0fdfa6a7bf055", "label": "Arbitrum L2 ERC20 gateway (canonical bridge)", "type": "BRG", "is_contract": 1,
+   "source": "docs/RECON.md §3 'Мост (п. 16)': WETH.l2Gateway(); data/sample/enrich.json token_bridge_probe"},
+  {"addr": "0x52e65b17fb6e5ba00ed806f37afcd2daa50271ca", "label": "Uniswap V3 pool", "type": "DEX", "is_contract": 1,
+   "source": "docs/RECON.md §3 'Идентификация топ-хабов': responds to token0/token1/factory/fee/slot0; data/sample/enrich.json fingerprint"},
+  {"addr": "0x89e5db8b5aa49aa85ac63f691524311aeb649eba", "label": "Uniswap V2-style router", "type": "DEX", "is_contract": 1,
+   "source": "docs/RECON.md §3 'Идентификация топ-хабов': responds to factory()+WETH(), 21902 B code; data/sample/enrich.json fingerprint"},
+  {"addr": "0x2459dedb3012d1e929edd17df26620120bdf11bf", "label": "Uniswap V4 periphery (router()+poolManager())", "type": "DEX", "is_contract": 1,
+   "source": "docs/RECON.md §3 'Идентификация топ-хабов'; data/sample/enrich.json fingerprint"},
+  {"addr": "0x8876789976decbfcbbbe364623c63652db8c0904", "label": "Uniswap V4 contract (poolManager())", "type": "DEX", "is_contract": 1,
+   "source": "docs/RECON.md §3 'Идентификация топ-хабов'; data/sample/enrich.json fingerprint"},
+  {"addr": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77", "label": "Uniswap V4 contract (poolManager())", "type": "DEX", "is_contract": 1,
+   "source": "docs/RECON.md §3 'Идентификация топ-хабов'; data/sample/enrich.json fingerprint"},
+  {"addr": "0x00000000000000000000000000000000000a4b05", "label": "ArbOS system sender", "type": "CTR", "is_contract": 1,
+   "source": "docs/RECON.md §3 'Идентификация топ-хабов': 1-byte code, sender of system txs; data/sample/code.json"}
+]
