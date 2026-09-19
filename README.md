@@ -11,8 +11,13 @@
 
 ## Official CA
 
-No contract address has been published. Any token, site or link that claims to be this project is not ours.
-When a CA exists it will appear here first — verify against this file, ignore lookalikes and unsolicited links.
+```
+0x1b617f3cee8eb9cabe03a32b1f0a1797302dbfde
+```
+
+[Token page on Blockscout](https://robinhoodchain.blockscout.com/token/0x1b617f3cee8eb9cabe03a32b1f0a1797302dbfde) · [Trace it on ghostscan.app](https://ghostscan.app/flow.html?root=0x1b617f3cee8eb9cabe03a32b1f0a1797302dbfde) · [Shown on the site](https://ghostscan.app/#access)
+
+This is the only address. Any other token, site or link that claims to be this project is not ours — verify against this file and the header of ghostscan.app.
 
 **Where did the money go?** — for every address on Robinhood Chain.
 
