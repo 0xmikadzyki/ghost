@@ -82,7 +82,7 @@ Requirements: Git, [uv](https://docs.astral.sh/uv/) (it installs Python 3.13 its
 [Envio HyperSync token](https://envio.dev/app/api-tokens).
 
 ```sh
-git clone https://github.com/0xYato/rhflow && cd rhflow
+git clone https://github.com/0xmikadzyki/ghost && cd ghost
 uv sync
 cp .env.example .env && chmod 600 .env          # put ENVIO_TOKEN there; it is never printed
 uv run rhflow backfill --out data/transfers     # every ERC-20 Transfer from block 0 to head-1000
